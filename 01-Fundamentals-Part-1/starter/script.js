@@ -50,3 +50,6 @@ const birthYear = 1991;
 
 var job = "Programm er";
 console.log(`Godina rođenja ${typeof birthYear}  Posoa ${typeof job}`);
+
+let ja = "marko";
+console.log(ja);
