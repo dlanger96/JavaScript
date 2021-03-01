@@ -41,7 +41,8 @@ console.log(typeof year);
 year = 1991;
 console.log(year);
 console.log(typeof year);
-*/
+
+
 
 let age = 30;
 age = 31;
@@ -53,3 +54,32 @@ console.log(`Godina rođenja ${typeof birthYear}  Posoa ${typeof job}`);
 
 let ja = "marko";
 console.log(ja);
+
+console.log(typeof ja);
+*/
+const now = 2021
+const ageJonas = now - 1991;
+const ageSarah = now - 2001;
+console.log(`Jonas is ${ageJonas} years old, and Sarah is ${ageSarah} years old`);
+console.log("2 na treću je:", 2 ** 3); // potenciranje 
+
+const firstName = "Jonas";
+const lastName = "Marković";
+console.log(`Ime je: ${firstName}, a prezime je: ${lastName}`);
+
+let x = 10 + 5;
+x += 10; // jednako kao i x = x + 10;
+x *= 4; // jednako kao i x = x * 4;
+x++; // x = x + 1;
+x--; // x = x -1;
+console.log(x);
+
+// Usporedbe
+
+console.log(ageJonas > ageSarah);
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1991 > now - 2019)
+
