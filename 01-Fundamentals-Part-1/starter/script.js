@@ -56,7 +56,7 @@ let ja = "marko";
 console.log(ja);
 
 console.log(typeof ja);
-*/
+
 const now = 2021
 const ageJonas = now - 1991;
 const ageSarah = now - 2001;
@@ -82,4 +82,15 @@ console.log(ageSarah >= 18);
 const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > now - 2019)
+*/
 
+const now = 2021
+const ageJonas = now - 1991;
+const ageSarah = now - 2001;
+console.log(now - 1991 > now - 2019)
+
+let x, y;
+x = y = 25 - 10 - 5;
+console.log(x, y);
+const averageAge = (ageJonas + ageSarah) / 2;
+console.log(ageJonas, ageSarah, averageAge);
