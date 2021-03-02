@@ -137,7 +137,7 @@ console.log(`Regular string`);
 console.log(`String
 New String
 New Line`);
-*/
+
 
 const age = 15;
  
@@ -158,5 +158,23 @@ else {
     century = 21;
 }
 console.log(`You were born in ${century} century`);
+*/
 
+// Type Conversion
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(String(24), 24);
+
+// Type Coercion
+console.log("I am " + 24 + " years old.");
+console.log("I am " + "24" + " years old."); // Isto, ali ovdje nije potrebno uopće da koristim String()
+console.log("23" - "10" - "3"); // Prepoznaje da se radi o brojevima, ali samo ako je MINUS
+console.log("23" + "10" + "3"); // Ovdje nije taj slučaj i ispis izgleda 23103
+
+
+let n = "1" + 1;
+n = n - 1;
+console.log(n);
 
