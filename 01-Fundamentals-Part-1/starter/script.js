@@ -82,7 +82,7 @@ console.log(ageSarah >= 18);
 const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > now - 2019)
-*/
+
 
 const now = 2021
 const ageJonas = now - 1991;
@@ -94,3 +94,35 @@ x = y = 25 - 10 - 5;
 console.log(x, y);
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
+*/
+
+const mark = "Mark";
+const john = "John";
+
+const massMark = 95;
+const heightMark = 1.88;
+
+const massJohn = 85;
+const heightJohn = 1.76;
+
+const bmiMark = massMark / heightMark ** 2;
+const bmiJohn = massJohn / heightJohn **2;
+let markHigherBMI;
+
+if (bmiMark > bmiJohn) {
+    markHigherBMI = true;
+    console.log("Mark has higher BMI than John", markHigherBMI);
+}
+else{
+    markHigherBMI = false;
+    console.log("John has higher BMI than Mark");
+}
+ 
+
+console.log(`Mark BMI= ${bmiMark}, and John BMI= ${bmiJohn}`)
+
+
+
+
+
+
