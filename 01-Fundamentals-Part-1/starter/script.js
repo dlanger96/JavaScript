@@ -120,7 +120,7 @@ else{
  
 
 console.log(`Mark BMI= ${bmiMark}, and John BMI= ${bmiJohn}`)
-*/
+
 
 const firstName = "Dominik";
 const job = "Student";
@@ -137,7 +137,26 @@ console.log(`Regular string`);
 console.log(`String
 New String
 New Line`);
+*/
 
+const age = 15;
+ 
+if (age >= 18) {
+    console.log("Sarah can start driving licence 😊");
+}
+else{
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years 🤣`);
+}
 
+const birthYear = 1996;
+let century;
+if (birthYear <= 2000) {
+     century = 20;
+}
+else {
+    century = 21;
+}
+console.log(`You were born in ${century} century`);
 
 
