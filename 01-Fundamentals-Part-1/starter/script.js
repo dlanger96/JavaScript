@@ -87,14 +87,14 @@ console.log(now - 1991 > now - 2019)
 const now = 2021
 const ageJonas = now - 1991;
 const ageSarah = now - 2001;
-console.log(now - 1991 > now - 2019)
+console.log(now - 1991 > now - 2019) 
 
 let x, y;
 x = y = 25 - 10 - 5;
 console.log(x, y);
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
-*/
+
 
 const mark = "Mark";
 const john = "John";
@@ -120,8 +120,23 @@ else{
  
 
 console.log(`Mark BMI= ${bmiMark}, and John BMI= ${bmiJohn}`)
+*/
 
+const firstName = "Dominik";
+const job = "Student";
+const birthYear = 1996;
+const year = 2037;
 
+const dominik = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job;
+console.log(dominik);
+
+const dominikNEW = `I'm ${firstName}, a ${year - birthYear} years old ${job}`;
+console.log(dominikNEW);
+
+console.log(`Regular string`);
+console.log(`String
+New String
+New Line`);
 
 
 
