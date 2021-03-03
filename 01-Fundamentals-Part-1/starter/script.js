@@ -158,7 +158,7 @@ else {
     century = 21;
 }
 console.log(`You were born in ${century} century`);
-*/
+
 
 // Type Conversion
 const inputYear = "1991";
@@ -178,3 +178,44 @@ let n = "1" + 1;
 n = n - 1;
 console.log(n);
 
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean({}));
+
+const money = 0;
+
+if (money) {
+    console.log("Imaš penez");
+}
+else {
+    console.log("Nemaš penez");
+}
+
+let height = 0;
+
+if (height) {
+    console.log("Definirana je vrijednost");
+}
+else console.log("Nije definirana");
+*/
+
+const age = 18;
+
+if (age === 18) {
+    console.log("Možeš kupit pivo striktno ===");
+}
+else if (age == 18) {
+    console.log("Možeš kupit vino pretrava ipak tip podatka == ");
+}
+
+ const favourite = Number(prompt("What's your favourite number?"));
+ console.log(favourite);
+ 
+ if (favourite === 23) { /// 23 === 23
+     console.log("Uniso si uistinu broj 23");
+ } else if (favourite !== 0) {
+     console.log("Unesen je broj")
+ }
+ else console.log("Unesen je broj, ali je pohranjen kao string!!") // 23 === "23"
