@@ -199,7 +199,7 @@ if (height) {
     console.log("Definirana je vrijednost");
 }
 else console.log("Nije definirana");
-*/
+
 
 const age = 18;
 
@@ -219,3 +219,58 @@ else if (age == 18) {
      console.log("Unesen je broj")
  }
  else console.log("Unesen je broj, ali je pohranjen kao string!!") // 23 === "23"
+ 
+
+ const hasDriversLicence = true;
+ const hasGoodVision = true;
+
+ console.log(hasDriversLicence && hasGoodVision);
+ console.log(hasDriversLicence || hasGoodVision);
+ console.log(!(hasDriversLicence) && hasGoodVision);
+
+ let shouldDrive;
+
+ if (hasDriversLicence && hasGoodVision) {
+     shouldDrive = true;
+     console.log(shouldDrive);
+ 
+ }
+ else {
+     shouldDrive = false;
+     console.log(shouldDrive);
+ }
+
+ const isTired = false;
+
+ console.log((hasDriversLicence && hasGoodVision) || isTired)
+
+ if (hasDriversLicence && hasGoodVision && !isTired) {
+     console.log("PunGas!");
+ }
+ */
+
+const dolphinsScore1 = 196;
+const dolphinsScore2 = 108;
+const dolphinsScore3 = 89;
+
+const koalasScore1 = 196;
+const koalasScore2 = 108;
+const koalasScore3 = 89;
+
+const averageDolphins = (dolphinsScore1 + dolphinsScore2 + dolphinsScore3) / 3;
+const averageKoalas = (koalasScore1 + koalasScore2 + koalasScore3) / 3;
+console.log("Dolphins Average",averageDolphins);
+console.log("Koalas Average",averageKoalas);
+
+if ((averageDolphins >= 100) && (averageDolphins > averageKoalas)) {
+    console.log("Dolphins WIN!");
+}
+else if ((averageKoalas >= 100) && (averageKoalas > averageDolphins)) {
+    console.log("Koalas WIN!");
+}
+else if ((averageDolphins >= 100) && (averageKoalas >= 100) && (averageDolphins === averageKoalas)) {
+    console.log("DRAW!!");
+}
+else {
+    console.log("NO Winer");
+}
