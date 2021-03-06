@@ -304,7 +304,7 @@ switch (day) {
         break;
 }
 
-*/
+
 
 const age = 25;
 age >= 18 ? console.log("I like to drink wine ") : console.log("I like to drink Water");
@@ -322,3 +322,10 @@ else {
 console.log(drink2);
 
 console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+
+*/
+
+const bill = 275
+const tip = (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.20;
+
+console.log(`Bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
