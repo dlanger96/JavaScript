@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 function cutFruitPieces(fruit) {
     return fruit * 4;
 }
@@ -12,4 +12,30 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(2, 3));
+*/
 
+function calcAge(birthYear) {
+    const currentYear = Number(new Date().getFullYear()); 
+    return currentYear - birthYear;
+    
+}
+
+
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age
+    if (retirement > 0) {
+        console.log("Sir")       
+        return retirement;
+    } else {
+        return -1;
+    }
+    
+}
+
+console.log(yearsUntilRetirement(1996, "Dominik"));
+console.log(yearsUntilRetirement(1950, "Zdenko"));
+
+
+ 
