@@ -36,8 +36,9 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1996, "Dominik"));
 console.log(yearsUntilRetirement(1950, "Zdenko"));
-*/
 
+
+// Coding challange
 const calcAverage = (score1, score2, score3) => {
     let average = (score1 + score2 + score3) / 3;
     return average;
@@ -65,4 +66,47 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 
 console.log(checkWinner(dolphins, koalas)); 
- 
+*/
+
+// Array
+const firend1 = "Michael";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Michael","Steven","Peter"];
+console.log(friends);
+
+const yearss = new Array(1991, 1984, 2008, 2020);
+console.log(yearss);
+
+console.log(friends[0],friends[2]);
+console.log(friends.length);
+console.log(friends[friends.length -1]);
+
+friends[2] = "Jay";
+console.log(friends[2]);
+
+const firstName = "Dominik"
+const dominik = [firstName, "Langer", 2037 - 1996, "student", friends];
+
+console.log(dominik);
+console.log(dominik.length);
+
+function calcAge(birthYear) {
+    return 2037 - birthYear;
+}
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const firstYear = `Prva godina: ${calcAge(years[0])}`;
+console.log(firstYear);
+console.log("---------");
+
+let ages = [];
+for (let index = 0; index < years.length; index++) {
+    const element = calcAge(years[index]);
+    console.log(element);
+    ages[index] = element;
+}
+
+console.log(ages);
