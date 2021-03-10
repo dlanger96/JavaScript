@@ -66,7 +66,7 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 
 console.log(checkWinner(dolphins, koalas)); 
-*/
+
 
 // Array
 const firend1 = "Michael";
@@ -110,3 +110,38 @@ for (let index = 0; index < years.length; index++) {
 }
 
 console.log(ages);
+*/ 
+
+// Array Methods
+
+const friends = ["Michael","Steven","Peter"];
+const newLenght = friends.push("Jay"); // Dodavanje na kraj
+console.log(friends);
+console.log(newLenght);
+
+friends.unshift("John");
+console.log(friends); // Dodavanej na pocetak
+
+//Brisanje elemenata
+
+friends.pop(); //Izbacuje zadnji element
+const poped = friends.pop();
+console.log(poped);
+console.log(friends);
+
+friends.shift(); // Izbacuje prvi element
+console.log(friends);
+
+console.log(friends.indexOf("Steven")); // vraća indeks tog elementa
+
+console.log(friends.includes("Steven")); // Ako posotji, vraća boolean vriednost
+
+friends.push(23);
+console.log(friends.includes("23")) // Neće ga pronaći jer je striktno pretraživanje
+
+if (friends.includes("Peter")) {
+    console.log(`You have a friend called Peter`);
+} else {
+    friends.push("Peter")
+}
+console.log(friends);
