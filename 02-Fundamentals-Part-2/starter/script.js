@@ -110,7 +110,7 @@ for (let index = 0; index < years.length; index++) {
 }
 
 console.log(ages);
-*/ 
+
 
 // Array Methods
 
@@ -139,9 +139,41 @@ console.log(friends.includes("Steven")); // Ako posotji, vraća boolean vriednos
 friends.push(23);
 console.log(friends.includes("23")) // Neće ga pronaći jer je striktno pretraživanje
 
-if (friends.includes("Peter")) {
+if (friends.includes("Peter")) { 
     console.log(`You have a friend called Peter`);
 } else {
     friends.push("Peter")
 }
 console.log(friends);
+*/
+ 
+// Coding Challange #2
+ 
+const bills = [125, 555, 44]
+let tip = 0;
+const tips = [];
+const total = [];
+
+function calcTip(bill) {
+    if (bill >= 50 && bill <= 300) {
+        tip = 0.15 * bill;
+        tips.push(tip);
+        total.push(tip + bill)
+        console.log("15%")
+        return tip;
+    }else {
+        tip = 0.20 * bill;
+        tips.push(tip);
+        total.push(tip + bill)
+        console.log("20%")
+        return tip;
+    }
+}
+
+for (let index = 0; index < bills.length; index++) {
+    const element = calcTip(bills[index]);
+    console.log(`Račun broj ${index}: Iznosi = ${bills[index]}, napojnica iznosi: ${element}, a ukupno ${total[index]}`);
+}
+
+console.log(`Napojnice ${tips}`);
+console.log(`Sve ${total}`);
