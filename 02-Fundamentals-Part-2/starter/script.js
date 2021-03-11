@@ -178,7 +178,7 @@ for (let index = 0; index < bills.length; index++) {
 console.log(`Napojnice ${tips}`);
 console.log(`Sve ${total}`);
 
-*/
+
 
 // Objekti
 
@@ -211,3 +211,77 @@ dominik["twitter"] = "@dominik-langer";
 console.log(dominik);
 
 console.log(`${dominik["firstName"]} has ${dominik["friends"].length} friends, and his best friend is called ${dominik["friends"][0]}`);
+
+
+
+
+
+const dominik = {
+    firstName: "Dominik",
+    lastName: "Langer",
+    birthYear: 1996,
+    job: "student",
+    friends: ["Michael", "Peter", "Stevan"],
+    hasDriversLicence: true,
+
+    // calcAge: function(birthYear){ // Dodana je metoda za izracunavanje godina
+    //     return 2037 - birthYear
+    // }
+
+    // calcAge : function(){
+    //     return 2037 - this.birthYear;
+    // }
+
+    calcAge : function (){
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    
+    getSummery : function(){
+        if (this.hasDriversLicence) {
+            return `${this.firstName} is a ${this.calcAge} old ${this.job}, and he has a driver's licence`;
+        } else {
+            return `${this.firstName} is a ${this.calcAge} old ${this.job}, and he hasn't driver's licence`;
+        }
+    },
+    
+
+    getSummary : function(){
+        return `${this.firstName} is a ${this.calcAge()} old ${this.job}, and he has ${this.hasDriversLicence ? "a" : "no"} driver's licence`;
+    }
+};
+console.log(dominik.calcAge());
+console.log(dominik["getSummary"]());
+console.log(dominik["age"]);
+console.log(dominik.age);
+
+*/
+
+const mark = {
+    fullNameM : "Mark Miller",
+    massM : 78,
+    heightM : 1.69,
+
+    calcBMI: function() {
+        this.bmiM = this.massM / (this.heightM ** 2);
+        return this.bmiM;
+    }
+};
+
+const john ={
+    fullNameJ: "John Smith",
+    massJ: 92,
+    heightJ: 1.95,
+
+    calcBMI: function() {
+        this.bmiJ = this.massJ / (this.heightJ ** 2);
+        return this.bmiJ;
+    }
+};
+
+if (mark["calcBMI"]() > john["calcBMI"]()) {
+    console.log(`${mark["fullNameM"]} has a highrt BMI (${mark["bmiM"]}) than ${john["fullNameJ"]} who has BMI (${john["bmiJ"]})`);
+} else {
+    console.log(`${john["fullNameJ"]} has a higher BMI (${john["bmiJ"]}) than Mark BMI ${mark["bmiM"]}`);
+}

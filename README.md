@@ -48,6 +48,8 @@ varijabla.includes(element);
 
 Kreiranje
 
+Pazi na firstName: !!!!!
+
 ```javascript
 const dominik = {
     firstName: "Dominik",
@@ -82,3 +84,46 @@ const interestedIn = prompt("What do you want to know about me? firstName, lastN
 
 console.log( `Odabrao si (${interestedIn}): ${dominik[interestedIn]}`);
 ```
+
+Dodavanje metode
+
+```javascript
+const dominik = {
+    firstName: "Dominik",
+    lastName: "Langer",
+    age: 25,
+    job: "student",
+    friends: ["Michael", "Peter", "Stevan"]
+
+    calcAge : function (){
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary : function(){
+        return `${this.firstName} is a ${this.calcAge()} old ${this.job}, and he has ${this.hasDriversLicence ? "a" : "no"} driver's licence`;
+    }
+};
+```
+
+Ako ima vozačku dozvolu onda će string sadržavati a, ako nema onda će biti no
+
+```javascript
+${this.hasDriversLicence ? "a" : "no"}
+```
+
+Unutar metode calcAge postavlja se i novo svojstvo na tom objektu koji se zove age. Nakon što se metoda izvrši tek se tada dodjeljuje string tom svojstvu.
+
+```javascript
+console.log(dominik.calcAge());
+console.log(dominik["getSummary"]());
+console.log(dominik["age"]);
+```
+Rezultat 
+```
+41
+Dominik is a 41 old student, and he has a driver's licence
+41
+```
+
+
