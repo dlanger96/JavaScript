@@ -145,7 +145,7 @@ if (friends.includes("Peter")) {
     friends.push("Peter")
 }
 console.log(friends);
-*/
+
  
 // Coding Challange #2
  
@@ -177,3 +177,37 @@ for (let index = 0; index < bills.length; index++) {
 
 console.log(`Napojnice ${tips}`);
 console.log(`Sve ${total}`);
+
+*/
+
+// Objekti
+
+const dominik = {
+    firstName: "Dominik",
+    lastName: "Langer",
+    age: 25,
+    job: "student",
+    friends: ["Michael", "Peter", "Stevan"]
+};
+
+console.log(dominik.firstName, dominik.lastName);
+console.log(dominik["lastName"]);
+
+const nameKey = "Name";
+
+console.log(dominik["first" + nameKey]);
+console.log(dominik["last" + nameKey]);
+
+const interestedIn = prompt("What do you want to know about me? firstName, lastName, age, job or friends")
+
+if (dominik[interestedIn]) {
+    console.log( `Odabrao si (${interestedIn}): ${dominik[interestedIn]}`);
+} else {
+    console.log("Wring request!");
+}
+
+dominik.location = "Portugal";
+dominik["twitter"] = "@dominik-langer";
+console.log(dominik);
+
+console.log(`${dominik["firstName"]} has ${dominik["friends"].length} friends, and his best friend is called ${dominik["friends"][0]}`);
