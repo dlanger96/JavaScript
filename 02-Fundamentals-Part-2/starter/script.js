@@ -176,7 +176,7 @@ for (let index = 0; index < bills.length; index++) {
 }
 
 console.log(`Napojnice ${tips}`);
-console.log(`Sve ${total}`);
+console.log(`types ${total}`);
 
 
 
@@ -256,7 +256,7 @@ console.log(dominik["getSummary"]());
 console.log(dominik["age"]);
 console.log(dominik.age);
 
-*/
+
 
 const mark = {
     fullNameM : "Mark Miller",
@@ -285,3 +285,47 @@ if (mark["calcBMI"]() > john["calcBMI"]()) {
 } else {
     console.log(`${john["fullNameJ"]} has a higher BMI (${john["bmiJ"]}) than Mark BMI ${mark["bmiM"]}`);
 }
+
+
+
+for (let rep = 1; rep <= 10; rep++){
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+   
+}
+
+*/
+
+const dominik = ["Dominik", "Langer", 2037 - 1996, "student", ["Micahel", "Peter", "Steven"]];
+const types = [];
+
+for (let i = 0; i < dominik.length; i++) {
+    const element = typeof dominik[i];
+    //console.log(element);
+    //types[i] = element;
+    types.push(element);
+    
+
+}
+console.log(types)
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    const element = 2037 - years[i];
+    ages.push(element);
+}
+
+console.log(ages);
+
+
+for (let i = 0; i < dominik.length; i++) {
+
+    if (typeof dominik[i] !== "string") continue; // AKo nije string neće se obavit
+        
+    const element = typeof dominik[i];
+    console.log(element);
+    
+
+}
+
