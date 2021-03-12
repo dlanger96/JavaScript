@@ -103,10 +103,10 @@ console.log(firstYear);
 console.log("---------");
 
 let ages = [];
-for (let index = 0; index < years.length; index++) {
-    const element = calcAge(years[index]);
+for (let rep = 0; rep < years.length; rep++) {
+    const element = calcAge(years[rep]);
     console.log(element);
-    ages[index] = element;
+    ages[rep] = element;
 }
 
 console.log(ages);
@@ -132,7 +132,7 @@ console.log(friends);
 friends.shift(); // Izbacuje prvi element
 console.log(friends);
 
-console.log(friends.indexOf("Steven")); // vraća indeks tog elementa
+console.log(friends.repOf("Steven")); // vraća indeks tog elementa
 
 console.log(friends.includes("Steven")); // Ako posotji, vraća boolean vriednost
 
@@ -170,9 +170,9 @@ function calcTip(bill) {
     }
 }
 
-for (let index = 0; index < bills.length; index++) {
-    const element = calcTip(bills[index]);
-    console.log(`Račun broj ${index}: Iznosi = ${bills[index]}, napojnica iznosi: ${element}, a ukupno ${total[index]}`);
+for (let rep = 0; rep < bills.length; rep++) {
+    const element = calcTip(bills[rep]);
+    console.log(`Račun broj ${rep}: Iznosi = ${bills[rep]}, napojnica iznosi: ${element}, a ukupno ${total[rep]}`);
 }
 
 console.log(`Napojnice ${tips}`);
@@ -329,7 +329,7 @@ for (let i = 0; i < dominik.length; i++) {
 
 }
 
-*/
+
 
 const dominik = ["Dominik", "Langer", 2037 - 1996, "student", ["Micahel", "Peter", "Steven"]];
 
@@ -350,3 +350,75 @@ for (let exercies = 1; exercies < 4; exercies++) {
     }
    
 }
+
+
+
+// console.log("FOR LOOP")
+// for (let rep = 0; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
+
+console.log("While LOOP")
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) +1;
+//console.log(dice);
+
+while (dice !== 6)
+{
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) +1;
+    dice === 6 ? console.log("Ide van", dice) : console.log("Dalje");
+}
+console.log(`OUT WITH ${dice}`);
+
+*/
+
+// Coding Challange #4
+
+const bills = [22,295,176,440,37,105,10,1100,86,52];
+let tip = 0;
+const tips = [];
+const totals = [];
+
+function calcTip(bill) {
+    if (bill >= 50 && bill <= 300) {
+        tip = 0.15 * bill;
+        tips.push(tip);
+        totals.push(tip + bill)
+        console.log("15%")
+        return tip;
+    }else {
+        tip = 0.20 * bill;
+        tips.push(tip);
+        totals.push(tip + bill)
+        console.log("20%")
+        return tip;
+    }
+}
+
+for (let i = 0; i < bills.length; i++) {
+    const element = bills[i];
+    calcTip(element);
+}
+
+console.log(tips);
+console.log(totals);
+
+
+
+function calcAverage(arr) {
+    let sum = 0;
+    for (let index = 0; index < arr.length; index++) {
+        const element = arr[index];
+        sum += element; 
+    }
+    sum = sum / (arr.length);
+    return sum;
+}
+
+console.log(calcAverage(totals));
