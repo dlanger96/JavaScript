@@ -293,7 +293,7 @@ for (let rep = 1; rep <= 10; rep++){
    
 }
 
-*/
+
 
 const dominik = ["Dominik", "Langer", 2037 - 1996, "student", ["Micahel", "Peter", "Steven"]];
 const types = [];
@@ -329,3 +329,24 @@ for (let i = 0; i < dominik.length; i++) {
 
 }
 
+*/
+
+const dominik = ["Dominik", "Langer", 2037 - 1996, "student", ["Micahel", "Peter", "Steven"]];
+
+const broj = dominik.length -1;
+
+for (let manji = broj; manji >= 0; manji--) {
+    const element = dominik[manji];
+    console.log(element);
+    
+}
+
+for (let exercies = 1; exercies < 4; exercies++) {
+    console.log(`-----Starting exercise ${exercies}-----`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Lifting weight repetition ${rep}`);
+        
+    }
+   
+}
