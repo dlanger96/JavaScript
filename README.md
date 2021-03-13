@@ -2,7 +2,7 @@
  My trip with JavaScript.
 
 
- ### Arrays
+ ## Arrays
  ```javascript
  const array = [];
  const aray2 = new Array();
