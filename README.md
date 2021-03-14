@@ -1,15 +1,17 @@
 # JavaScript
- My trip with JavaScript.
 
+My trip with JavaScript.
 
- ## Arrays
- ```javascript
- const array = [];
- const aray2 = new Array();
- ```
+## Arrays
+
+```javascript
+const array = [];
+const aray2 = new Array();
+```
+
 ## Arrays Methods
 
-Dodavanje na kraj 
+Dodavanje na kraj
 
 ```javascript
 varijabla.push("NoviZapis");
@@ -34,15 +36,31 @@ varijabla.shift();
 ```
 
 Dohvaćanje indeksa
+
 ```javascript
 varijabla.indexOf(elemnt);
 ```
+
 Vraćanje boolean vrijednosti ako je element unutar polja
-STRIKTNO PRETRAŽIVANJE === 
+STRIKTNO PRETRAŽIVANJE ===
+
 ```javascript
 varijabla.includes(element);
 ```
 
+---
+
+**_Spajanje dva polja_**
+
+```javascript
+const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+const temperaturesNight = [3, -2, -10, -1, "error", 9, 13, 19, 15, 14, 9, 5];
+
+const allTemperatures = temperatures.concat(temperaturesNight);
+console.log(allTemperatures);
+```
+
+---
 
 ## Objekti
 
@@ -52,17 +70,18 @@ Pazi na firstName: !!!!!
 
 ```javascript
 const dominik = {
-    firstName: "Dominik",
-    lastName: "Langer",
-    age: 25,
-    job: "student",
-    friends: ["Michael", "Peter", "Stevan"]
+  firstName: "Dominik",
+  lastName: "Langer",
+  age: 25,
+  job: "student",
+  friends: ["Michael", "Peter", "Stevan"],
 };
 ```
 
 Ispis
 
 Ispis koriteći .
+
 ```javascript
 console.log(dominik.firstName);
 ```
@@ -80,9 +99,11 @@ console.log(dominik["age"]);
 Uzimam input od korisnika
 
 ```javascript
-const interestedIn = prompt("What do you want to know about me? firstName, lastName, age, job or friends")
+const interestedIn = prompt(
+  "What do you want to know about me? firstName, lastName, age, job or friends"
+);
 
-console.log( `Odabrao si (${interestedIn}): ${dominik[interestedIn]}`);
+console.log(`Odabrao si (${interestedIn}): ${dominik[interestedIn]}`);
 ```
 
 Dodavanje metode
@@ -119,11 +140,11 @@ console.log(dominik.calcAge());
 console.log(dominik["getSummary"]());
 console.log(dominik["age"]);
 ```
-Rezultat 
+
+Rezultat
+
 ```
 41
 Dominik is a 41 old student, and he has a driver's licence
 41
 ```
-
-
