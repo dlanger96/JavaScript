@@ -62,6 +62,40 @@ console.log(allTemperatures);
 
 ---
 
+Ispis temperature preko polja i pomoću stringa
+
+```javascript
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+const forcast = [];
+
+function printForcast(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const element = `Day ${i + 1} expected temeprature = ${arr[i]} `;
+    forcast.push(element);
+  }
+
+  return forcast.toString();
+}
+
+function forcastPrint(arr) {
+  let element = "";
+  for (let i = 0; i < arr.length; i++) {
+    element += `...Day ${i + 1} expected temeprature = ${arr[i]}`;
+  }
+
+  return element + "...";
+}
+
+console.log(printForcast(data1));
+console.log(forcastPrint(data2));
+```
+
+```javascript
+Day 1 expected temeprature = 17 ,Day 2 expected temeprature = 21 ,Day 3 expected temeprature = 23
+...Day 1 expected temeprature = 12...Day 2 expected temeprature = 5...Day 3 expected temeprature = -5...Day 4 expected temeprature = 0...Day 5 expected temeprature = 4...
+```
+
 ## Objekti
 
 Kreiranje
