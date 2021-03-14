@@ -8,7 +8,7 @@ if (x === 23) {
 }
 
 console.log("-------");
-*/
+
 
 const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 const temperaturesNight = [3, -2, -10, -1, "error", 9, 13, 19, 15, 14, 9, 5];
@@ -72,3 +72,45 @@ console.log(
 );
 
 // amplitude = amplitude[0] - amplitude[1];
+
+
+function measureKelvin() {
+  const measurement = {
+    type: "temp",
+    unit: "celsius",
+    value: prompt("Degrees celsius"),
+  };
+  const kelvin = Number(measurement["value"]) + 273;
+  return kelvin;
+}
+
+console.log(measureKelvin());
+
+*/
+
+// Coding Challange #1
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+const forcast = [];
+
+function printForcast(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const element = `Day ${i + 1} expected temeprature = ${arr[i]} `;
+    forcast.push(element);
+  }
+
+  return forcast.toString();
+}
+
+function forcastPrint(arr) {
+  let element = "";
+  for (let i = 0; i < arr.length; i++) {
+    element += `...Day ${i + 1} expected temeprature = ${arr[i]}`;
+  }
+
+  return element + "...";
+}
+
+console.log(printForcast(data1));
+console.log(forcastPrint(data2));
