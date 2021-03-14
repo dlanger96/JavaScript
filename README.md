@@ -182,3 +182,29 @@ Rezultat
 Dominik is a 41 old student, and he has a driver's licence
 41
 ```
+
+# JavaScript + HTML + CSS
+
+**_ DOCUMENT OBJECT MODEL (DOM) manipulacija_**
+
+JS nam omogućuje da dohvatimo elemente iz HTML-a
+
+## Klase
+
+Primjer jedne klase u HTML-u
+
+```html
+<p class="message">Start guessing...</p>
+```
+
+JavaScript, koristi .message jer se radi o klasi i moraš pretovrit u text
+
+```javascript
+document.querySelector(".message").textContent;
+```
+
+Ako je definiran broj
+
+```javascript
+document.querySelector(".guess").value = 23;
+```
