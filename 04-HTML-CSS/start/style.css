@@ -1,0 +1,63 @@
+* {
+  /* Odabirem sve */
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  /* Odnosi se na cijeli body dio HTML-a */
+  background-color: rgb(248, 247, 228);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 50px;
+}
+
+h1 {
+  /* odnosi se samo na taj definirani heading */
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.first {
+  /* Ovo je za klasu koju sam definirao */
+  color: black;
+}
+
+#your-name {
+  /* ovo je za id koji sam definirao, ID mora biti jedinstven */
+  background-color: rgb(255, 238, 0);
+  border: 1px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+input,
+button {
+  /* definiram dva elementa unos teksta i gumb */
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: yellowgreen;
+}
+
+#your-name h2 {
+  /* unutar tog ID-a odabirem h2 */
+  color: olivedrab;
+}
+
+#course-image {
+  width: 400px;
+}
