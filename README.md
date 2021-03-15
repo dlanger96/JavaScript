@@ -208,3 +208,14 @@ Ako je definiran broj
 ```javascript
 document.querySelector(".guess").value = 23;
 ```
+
+## Događaji
+
+Pratim što se događa kada pritisnemo gumb, gumb je klasa "btn check", a input je klasa guess.
+Odabirem taj element preko .querySelectora("koja klasa") i pratim što se događa preko .addEventListener("koja aktivnost se prati", function(što da napravim kada se ta aktivnost izvrši?))
+
+```javascript
+document.querySelector(".check").addEventListener("click", function () {
+  console.log(document.querySelector(".guess").value);
+});
+```
