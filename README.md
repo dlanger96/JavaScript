@@ -185,7 +185,7 @@ Dominik is a 41 old student, and he has a driver's licence
 
 # JavaScript + HTML + CSS
 
-**_ DOCUMENT OBJECT MODEL (DOM) manipulacija_**
+<strong> DOCUMENT OBJECT MODEL (DOM) manipulacija</strong>
 
 JS nam omogućuje da dohvatimo elemente iz HTML-a
 
@@ -218,4 +218,15 @@ Odabirem taj element preko .querySelectora("koja klasa") i pratim što se događ
 document.querySelector(".check").addEventListener("click", function () {
   console.log(document.querySelector(".guess").value);
 });
+```
+
+## CSS manipulacija
+
+Želim postaviti zelenu pozadinu.
+Prvo dohvatim cijeli "body", zatim definiram da se radi o stilu preko .style i zatim ono što želim izmijeniti a to je .backgroundColor i zatim postavim na željenu boju tipa zelenu = <span style="color:green">'#60b347'</span>.
+
+Kod manipulacije uvijek se specificira <strong>STRING</strong>
+
+```javascript
+document.querySelector("body").style.backgroundColor = "#60b347";
 ```
