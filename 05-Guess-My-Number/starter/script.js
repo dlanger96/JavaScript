@@ -12,6 +12,7 @@ document.querySelector('.guess').value = 23;
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 //let score = Number(document.querySelector('.score').textContent);
 let score = 20;
+let highScore = 0;
 console.log(`Tajni broj je ${secretNumber}`);
 
 document.querySelector('.again').addEventListener('click', function () {
@@ -30,30 +31,33 @@ document.querySelector('.check').addEventListener('click', function () {
   console.log(guess);
 
   if (!guess) {
-    document.querySelector('.message').textContent = 'No number! 🛑';
+    displaymessage('No number! 🛑🛑');
+    // document.querySelector('.message').textContent = 'No number! 🛑';
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = 'Correct number! 🎉🎉🎉';
+    displaymessage('Correct number! 🎉🎉🎉');
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').textContent = secretNumber;
 
-    document.querySelector('.number').style.width = '30rem';
-  } else if (guess > secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = 'Number too HIGH ☝';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'You LOSE! 😢😢';
-      document.querySelector('.score').textContent = 0;
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
     }
-  } else if (guess < secretNumber) {
+
+    document.querySelector('.number').style.width = '30rem';
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = 'Number too LOW 👇';
+      displaymessage(
+        guess > secretNumber ? 'Number too HIGH ☝' : 'Number too LOW 👇'
+      );
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      document.querySelector('.message').textContent = 'You LOSE! 😢😢';
+      displaymessage('You LOSE! 😢😢');
       document.querySelector('.score').textContent = 0;
     }
   }
 });
+
+function displaymessage(message) {
+  document.querySelector('.message').textContent = message;
+}
