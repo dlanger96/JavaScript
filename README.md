@@ -230,3 +230,32 @@ Kod manipulacije uvijek se specificira <strong>STRING</strong>
 ```javascript
 document.querySelector("body").style.backgroundColor = "#60b347";
 ```
+
+Možemo odabrati samo jedan element, ali ako imamo više elemenata koji imaju isti naziv klase, moramo koristiti
+
+```javascript
+const btnsOpenModal = document.querySelectorAll(".show-modal");
+```
+
+```js
+NodeList(3) [button.show-modal, button.show-modal, button.show-modal]
+0: button.show-modal
+1: button.show-modal
+2: button.show-modal
+```
+
+Vidimo da se grupiraju kao polje, što znači da ih mogu izlistati i ispisati
+
+```js
+for (let i = 0; i < btnsOpenModal.length; i++) {
+  const element = btnsOpenModal[i];
+  console.log(element.textContent);
+}
+```
+
+```js
+NodeList(3) [button.show-modal, button.show-modal, button.show-modal]0: button.show-modal1: button.show-modal2: button.show-modallength: 3__proto__: NodeList
+script.js:11 Show modal 1
+script.js:11 Show modal 2
+script.js:11 Show modal 3
+```
