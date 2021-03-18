@@ -259,3 +259,92 @@ script.js:11 Show modal 1
 script.js:11 Show modal 2
 script.js:11 Show modal 3
 ```
+
+Ako je neka klasa postaljena na hidden preko HTML-a ja ju preko JS-a mogu postaviti da je vidljiva.
+
+Koristim
+
+```js
+.classList.remove("što želim maknuti");
+```
+
+Unutar HTML-a to izgleda ovako
+
+```html
+<div class="modal hidden"></div>
+<div class="overlay hidden"></div>
+```
+
+Cijeli kod gdje se ista funkcionalnost definira nad 3 gumba
+
+```js
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+const btnsOpenModal = document.querySelectorAll(".show-modal");
+console.log(btnsOpenModal);
+
+for (let i = 0; i < btnsOpenModal.length; i++) {
+  const element = btnsOpenModal[i];
+  element.addEventListener("click", function () {
+    modal.classList.remove("hidden"); // maknuo sam hiiden iz naziva klase
+    overlay.classList.remove("hidden");
+  });
+}
+```
+
+Mogao sam i direktno preko CSS-a, zato što je display postavljen na none
+
+```js
+modal.style.display = "block";
+```
+
+Dodavanje se izvršava na isti način
+
+```js
+btnCloseModal.addEventListener("click", function () {
+  overlay.classList.add("hidden"); //dodajem klasi hidden
+  modal.classList.add("hidden");
+});
+```
+
+<strong>Ovako je bolje DRY</strong>
+
+```js
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+const btnsOpenModal = document.querySelectorAll(".show-modal");
+console.log(btnsOpenModal);
+
+const openModal = function () {
+  modal.classList.remove("hidden"); // maknuo sam hiiden iz naziva klase
+  overlay.classList.remove("hidden");
+  //modal.style.display = 'block';
+};
+
+for (let i = 0; i < btnsOpenModal.length; i++) {
+  const element = btnsOpenModal[i];
+  element.addEventListener("click", openModal);
+}
+
+const closeModal = function (ispis) {
+  overlay.classList.add("hidden");
+  modal.classList.add("hidden");
+};
+
+btnCloseModal.addEventListener("click", closeModal);
+
+overlay.addEventListener("click", closeModal);
+```
+
+<strong>Zatvaranje na ESC samo ako je prozor otvoren</strong>
+
+```js
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    // Zatvaranje na ESC samo ako je modal otovren
+    closeModal();
+  }
+});
+```
