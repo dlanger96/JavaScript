@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  background-image: linear-gradient(to top left, #f1da04 0%, #0177fd 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,7 @@ main {
 }
 
 .current {
-  background-color: #c7365f;
+  background-color: #041c50;
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
@@ -164,4 +164,7 @@ main {
 .player--winner .name {
   font-weight: 700;
   color: #c7365f;
+}
+.hidden {
+  display: none;
 }

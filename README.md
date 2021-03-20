@@ -262,6 +262,14 @@ script.js:11 Show modal 3
 
 Ako je neka klasa postaljena na hidden preko HTML-a ja ju preko JS-a mogu postaviti da je vidljiva.
 
+<strong>Samo ako je prije toga definirana klasa hidden unutar CSS-a.</strong>
+
+```css
+.hidden {
+  display: none;
+}
+```
+
 Koristim
 
 ```js
@@ -347,4 +355,14 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+```
+
+Zanimljiv način implementacije izmjene korisnika, samo ako je player--active onda se pokazuje koji je korisnik.
+
+```js
+const player0 = document.querySelector(".player--0");
+const player1 = document.querySelector(".player--1");
+
+player0.classList.toggle("player--active");
+player1.classList.toggle("player--active");
 ```
